@@ -1,9 +1,10 @@
 @import '_media_setting';
 // color set
-$main_color: #2ff1c9;
-$sec_color: #11997f;
+$main_color: #abcc4e;
+$sec_color: #8b9911;
+$third_color: #003126;
 $white_color: #efefef;
-$web_bgc: #00202b;
+$web_bgc: $third_color;
 
 // original set
 *{
@@ -39,7 +40,7 @@ img{
 // layout set
 #main_layout{
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, #003649 0%,#002331 100%);
+    background-image: linear-gradient(to bottom, darken($main_color,30) 0%,$third_color 100%);
     &.blackboard{
         &::before{
             position: fixed;
@@ -306,7 +307,7 @@ article{
             padding: 5px;
             border: 1px dashed $sec_color;
             color: $white_color;
-            background-color: #444;
+            background-color: rgba(#444,.5);
             text-align: center;
             box-shadow: 2px 2px 3px #111;
             transform: skewX(-20deg);
