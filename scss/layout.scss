@@ -512,8 +512,24 @@ article{
     opacity: 0;
     z-index: 4;
     transition: opacity 1s ease, top 1s ease;
+    &.active{
+        visibility: visible;
+        top: 20%;
+        padding: 5px;
+        opacity: 1;
+    }
+    @include ori-direction($land){
+        &.active{
+            top: 5%;
+        }
+    }
     @include min-size($size-s){
         width: $size-s - 100px;
+        @include ori-direction($land){
+            &.active{
+                top: 20%;
+            }
+        }
     }
     @include min-size($size-m){
         width: $size-m - 100px;
@@ -521,12 +537,6 @@ article{
     @include min-size($size-l){
         width: $size-l - 100px;
         
-    }
-    &.active{
-        visibility: visible;
-        top: 20%;
-        padding: 5px;
-        opacity: 1;
     }
     %close_icon{
         display: block;
@@ -539,7 +549,6 @@ article{
         left: 6px;
         background-color: $sec_color;
         transition: transform .2s ease;
-        transform: rotate(0deg);
     }
     .closeBtn{
         cursor: pointer;
@@ -555,9 +564,17 @@ article{
         z-index: 2;
         &::before{
             @extend %close_icon;
+            transform: rotate(-45deg);
+            @include min-size($size-l){
+                transform: rotate(0deg);
+            }
         }
         &::after{
             @extend %close_icon;
+            transform: rotate(45deg);
+            @include min-size($size-l){
+                transform: rotate(0deg);
+            }
         }
         &:hover{
             &::before{
