@@ -709,12 +709,12 @@ article section#collections ul#collection_list li:hover {
 }
 @media (min-width: 768px) {
   #collection_float_box {
-    width: 668px;
+    width: 468px;
   }
 }
 @media (min-width: 992px) {
   #collection_float_box {
-    width: 892px;
+    width: 692px;
   }
 }
 #collection_float_box .closeBtn::after, #collection_float_box .closeBtn::before {

@@ -549,10 +549,10 @@ article{
         }
     }
     @include min-size($size-m){
-        width: $size-m - 100px;
+        width: $size-m - 300px;
     }
     @include min-size($size-l){
-        width: $size-l - 100px;
+        width: $size-l - 300px;
         
     }
     %close_icon{
